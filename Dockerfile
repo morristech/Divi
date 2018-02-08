@@ -1,4 +1,3 @@
-
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
@@ -19,13 +18,13 @@ RUN add-apt-repository ppa:bitcoin/bitcoin
   
 RUN apt-get update
 
-COPY ../PIVX /var/divi/PIVX-3.0
+COPY PIVX /var/divi/PIVX-3.0
 
-COPY bdbBuild.sh /var/divi/PIVX-3.0/bdbBuild.sh
+COPY docker/bdbBuild.sh /var/divi/PIVX-3.0/bdbBuild.sh
 
 RUN chmod +x /var/divi/PIVX-3.0/bdbBuild.sh
 
-COPY pivxmake.sh  /var/divi/PIVX-3.0/pivxmake.sh
+COPY docker/pivxmake.sh  /var/divi/PIVX-3.0/pivxmake.sh
 
 RUN chmod +x  /var/divi/PIVX-3.0/pivxmake.sh
 
