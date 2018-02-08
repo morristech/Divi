@@ -1,0 +1,4 @@
+[submodule "PIVX"]
+	path = PIVX
+	url = git@github.com:nuuneoi/PIVX.git
+	branch = 3.0
